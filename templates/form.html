@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#p1").click(function(){
+    alert("Your Request Submitted Succesfully.");
+  });
+});
+</script>
+</head>
+<style>
+body,html,section
+{
+
+
+   overflow-x:hidden;
+
+}
+
+.footer
+{
+  
+            position:absolute; 
+          color:white;
+            width: 100%; 
+            /* Height of the footer*/  
+            height: 250px; 
+            background: black; 
+
+    
+ 
+}
+@media screen and (max-width:615px)
+{
+ .qq
+{
+font-size:11px;
+}
+.footer
+{
+font-size:11px;
+}
+.q1
+{
+font-size:18px;
+}
+}
+</style>
+
+<body>
+<nav class="navbar navbar-inverse bg-warning sticky-top" >
+ <div class="container-fluid">
+ <a class="navbar-brand" href="#">
+<img src="{{url_for ('static',filename='t.jpg')}}" style="width:40px;">
+</a>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Animal Protection</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <a href="/"><li class="active"  ><button class="btn btn-light navbar-btn btn-sm">Home</button></li></a></ul>
+ 
+</div>
+</nav>
+<br>
+<form name="sentMessage" action="/post" method ="post" enctype="multipart/form-data">  
+<div >
+  <center><h3 class="q1">We would really appreciate your support and help to enable us helping and serving the speechless souls. </h3>
+</center>
+<br>
+<center> 
+  <table cellpadding="10" class="qq">
+    <tr><td><h3 class="q1">FILL THE INFORMATION BELOW</h3></td></tr>
+<tr><td  style="color:red;"><p> * marked area are compulsory to be fiiled.</p></td><tr>
+<tr>
+<td>UPLOAD A PICTURE</td>
+<td><input type="file" name="inputFile" ></td>
+
+</tr>
+<tr>
+<td>
+NAME OF A ANIMAL<sup style="color:red">*</sup>
+</td>
+<td><input type="text" name="animal_name" placeholder="Name of animal"></td></tr><tr><td>
+DESCRIPTION<sup style="color:red">*</sup></td>
+<td><textarea rows="2" cols="23" name="description" placeholder="Current state of animal">
+</textarea>
+</td>
+</tr>
+<tr><td>CONDITION OF ANIMAL<sup style="color:red">*</sup></td><td><input type="radio" name="condition" value="INJURED"> INJURED<br><input type="radio" name="condition" value="ROAMING"> ROAMING<br><input type="radio" name="condition" value="TROUBLING"> TROUBLING</td></tr>
+<tr><td>LOCATION OF ANIMAL<sup style="color:red">*</sup></td><td><textarea rows="2" cols="23" name="location" placeholder="Current Location of animal"></textarea></td></tr>
+<tr><td><h3 class="q1">INFORMATION FILLED BY</h3></td><tr>
+<tr><td>YOUR NAME<sup style="color:red">*</sup></td><td><input type="text" name="user_name" ></td></tr>
+<tr><td>CONTACT NO.<sup style="color:red">*</sup></td><td><input type="number" name="phone" ></td></tr>
+
+</table>
+
+<br>
+<button type="submit" id="p1" class="btn btn-primary" >Submit</button>
+</center>
+</div>
+</form>
+<br><br>
+
+<section class="footer">
+<br>
+<div class="container-fluid">
+
+  <table class="table table-borderless" style="margin-left:20px;color:white;">
+    <thead>
+      <tr>
+        <th>Useful Links</th>
+        <th>Brief Information</th>
+        <th>Follow Us On</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Privacy Policy</td>
+        <td>About Us</td>
+        <td><span><img src="{{url_for ('static',filename='l5.jpg') }}" style="width:20px;"></span>  Facebook</td>
+      </tr>
+      <tr>
+        <td>Term Of Use</td>
+        <td>Contact Us</td>
+        <td><span><img src="{{url_for ('static',filename='l3.jpg') }}" style="width:20px;"></span>  Instagram</td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+           <center> 
+       
+    <hr style="background-color:white;margin-left:30px;margin-right:30px">
+    <p class="copyright" style="color:white">Copyright reserved @ <strong>Vivek & Nakul</strong></i></p></center>
+</div>    
+</section>
+</body>
+</html>
