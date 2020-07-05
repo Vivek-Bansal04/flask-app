@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+
+body,html,section
+{
+
+
+   overflow-x:hidden;
+
+}
+
+
+.footer
+{
+  
+            position:absolute; 
+          color:white;
+            width: 100%; 
+            /* Height of the footer*/  
+            height: 250px; 
+            
+ background: grey;
+    
+ 
+}
+#mar1
+{
+    margin-left:50px;
+
+}
+.ww
+{
+  margin-left:375px;
+}
+@media screen and (max-width:615px)
+{
+  .mar
+  {
+   display: none;
+   margin-left:10px;
+  }
+  #mar1
+{
+    margin-left:20px;
+
+}
+
+ .qq
+{
+font-size:11px;
+}
+.ww
+{
+font-size:11px;
+margin-left:0px;
+}
+.footer
+{
+font-size:11px;
+}
+.q1
+{
+font-size:18px;
+}
+
+}
+</style>
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#006400">
+ <div class="container-fluid">
+ <a class="navbar-brand" href="/"> <img src="{{url_for ('static',filename='t.jpg')}}" style="width:40px;">
+</a>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/" style="color:white">Speechless Soul</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <a href="/" ><li class="active" ><button class="btn btn-light navbar-btn btn-sm">Home</button></li></a></ul>
+ 
+</div>
+</nav>
+<br>
+<form name="sentMessage" action="/post" method ="post" enctype="multipart/form-data" >  
+<div >
+  <center><h3 class="q1">We really appreciate your support for helping us in serving the speechless souls. </h3>
+    
+</center>
+<br>
+<ul style="color:red;" class="ww"><li>* marked area are compulsory to be fiiled.</li>
+<li>If a person don't able to upload the picture of the animal then he/she must upload the picture of the nearby area.</li>
+<li>Applicant must provide the exact location of the animal with city i.e colony,road name,sector (not only the city name).</li></ul>
+<center> 
+  <table cellpadding="10" class="qq">
+    <tr><td><h3 class="q1">FILL THE INFORMATION BELOW</h3></td></tr>
+
+<tr>
+<td>UPLOAD A PICTURE<sup style="color:red">*</sup></td>
+<td><input type="file" name="inputFile" accept="image/*" required></td>
+
+
+<tr>
+<td>
+NAME OF A ANIMAL<sup style="color:red">*</sup>
+</td>
+<td><input type="text" name="animal_name" placeholder="Name of animal" required></td></tr><tr><td>
+DESCRIPTION WITH LOCATION<sup style="color:red">*</sup></td>
+<td><textarea rows="2" cols="23" name="description" placeholder="Current state of animal" required>
+</textarea>
+</td>
+</tr>
+<tr><td>CONDITION OF ANIMAL<sup style="color:red">*</sup></td><td><input type="radio" name="condition" value="INJURED"> INJURED<br><input type="radio" name="condition" value="ROAMING"> ROAMING<br><input type="radio" name="condition" value="TROUBLING"> TROUBLING</td></tr>
+<tr><td>NEARSIGN BOARD<sup style="color:red">*</sup></td><td><textarea rows="2" cols="23" name="location" placeholder="Current Location of animal" required></textarea></td></tr>
+<tr><td><h3 class="q1">INFORMATION FILLED BY</h3></td><tr>
+<tr><td>YOUR NAME<sup style="color:red">*</sup></td><td><input type="text" name="user_name" placeholder="Your name"required></td></tr>
+<tr><td>CONTACT NO.<sup style="color:red">*</sup></td><td><input type="number" name="phone" placeholder="Contact no." required></td></tr>
+
+</table>
+
+<br>
+<input type="submit"  class="btn" style="background-color:#006400;color:white" value="submit">
+</center>
+</div>
+</form>
+<br><br>
+
+<section class="footer">
+<br>
+<div class="container-fluid">
+
+  <table class="table table-borderless" id="mar1" style="color:black;">
+    <thead>
+      <tr>
+        <th>Useful Links</th>
+        <th>Information</th>
+        <th>Follow Us</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.websitepolicies.com/policies/view/zQ2iSO5Y" style="color:black" target="_blank">Privacy Policy</a></td>
+        <td><a href="/about" style="color:black" target="_blank">About Us</a></td>
+        <td>  <a href="https://www.facebook.com/Speechless-Soul-103548761408901" style="color:black" target="_blank"><span><img src="{{url_for ('static',filename='l5.jpg') }}" style="width:20px;" target="_blank" style="color:black" class="mar"></span><span >Facebook</span></a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.websitepolicies.com/policies/view/YrZohdMD" style="color:black" target="_blank">Term and Conditions</a></td>
+
+        <td><a href="http://www.awbi.in/" style="color:black" target="_blank">AWBI</a></td>
+        <td> <a href="https://www.instagram.com/speechlesssoul04/" style="color:black" target="_blank"><span><img src="{{url_for ('static',filename='l3.jpg') }}" style="width:20px;" class="mar"></span><span >Instagram</span></a></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+           <center> 
+       
+    <hr style="background-color:black;margin-left:30px;margin-right:30px">
+    <p class="copyright" style="color:black">Copyright reserved @ <strong>SpeechlessSoul</strong></i></p></center>
+</div>    
+</section>
+</body>
+</html>

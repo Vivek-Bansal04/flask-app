@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>About Us</title>
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+$(document).ready(function(){
+  $("#slide").click(function(){
+    $("#slide1").slideToggle("slow");
+  });
+});
+</script>
+</head>
+<style>
+  body,html,section
+{
+
+
+   overflow-x:hidden;
+
+}
+#font1
+{
+  float: right;
+}
+
+.footer
+{
+  
+           
+          color:black;
+            width: 100%; 
+          
+            height: 100px; 
+            background:grey; 
+       
+    
+ 
+}
+@media screen and (max-width:615px)
+{
+.font
+{
+  font-size: 30px;
+}
+.footer
+{
+font-size:11px;
+}
+
+}
+#panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+color:white;
+  border: solid 1px #c3c3c3;
+}
+#slide, #slide1 {
+  padding: 5px;
+  text-align: center;
+  background-color: black;
+color:white;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
+#slide1 {
+  padding: 50px;
+  display: none;
+}
+
+
+
+.c {
+   text-align: justify; /* For Edge */
+  -moz-text-align-last: center; /* For Firefox prior 58.0 */
+  text-align-last: center;
+margin-left:10px;
+margin-right:10px;
+font-size: 16px;
+}
+</style>
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#006400">
+  <a class="navbar-brand" href="/" >
+   <img src="{{url_for ('static',filename='t.jpg')}}" alt="logo" style="width:40px;">
+                          Speechless Soul</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav" id="font1">
+      <li class="nav-item">
+        <a class="nav-link" href="/">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/post">FORM</a>
+      </li>
+     
+        
+    </ul>
+  </div>  
+</nav><br>
+<div class="jumbotron container" >
+  <br>
+<center><h1 style="margin-top:-30px" class="font">Let us make you more comfortable with our website.</h1>
+ <h5 class="c">We would like to introduce ourselves as the 'SPEECHLESS SOUL' which is an
+ coming Non Government and Non Profit Organisation dedicated towards the care
+ and well being of stray and abandoned animals without under any care.</h5>
+<div id="flip" style="background-color:#006400">Click to read more</div>
+<div id="panel" style="background-color:#006400">You can sum up a stray or an abandoned animal in a heartbeat. They do not expect much effort other than what basic human etiquette as well as sentiment demands. Things like care, affection, loyalty, responsibility, nurture, friendship and most of all, consideration. If each one of us can imbibe even the smallest amount of considerate effort towards these animals on the street, we will not only be better at our attempt at showing basic human instinct, but also, and much more importantly, depict true protectiveness for those that cannot look out for themselves. They don't ask anything in return. How can they? They cannot speak. But they will definitely adore you, for that one small act of kindness, goes a long way towards determining the kind of person that you are. So, here is your opportunity to join us in our efforts at making this world a much better place for strays and abandoned animals than it is currently. If you have spotted or know of any stray or abandoned animals in need of help in your vicinity then please contact us and we will do the needful. This is our stand to help those that deserve it. Will you stand with us?.</div>
+</div>
+
+<div class="container jumbotron"><br>
+<center><h1 style="margin-top:-30px" class="font">Why we have Started it.</h1>
+<h5 class="c">We are a team of highly dedicated and vastly skilled professionals from different spheres of life that have come together to form this organisation because we share a common empathy and sense of responsibility towards those that need our help. </h5>
+<div id="slide" style="background-color:#006400">Click to read more</div>
+<div id="slide1" style="background-color:#006400">We have initiated our operations recently and would like to take this opportunity to formally introduce ourselves through our Instagram page. We invite you to report any case that comes to your attention for either a stray animal or a homeless person in need of immediate aid and we will follow up with you immediately. We would also request you to like and share our Instagram page so that we are able to grow as an organisation while also increasing the reach of our awareness for the maximum benefit of those that are in dire need of help. We also hope that you and your families are keeping in good health and spirits during these testing times.</div>
+</div>
+<div class="container">
+  <center><u><h2>Meet our team</h2></u><br>
+  <img src="{{url_for ('static',filename='vivek.jpg')}}" alt="Girl in a jacket" width="200" height="200"><br><br>
+  <h6>His name is Vivek Bansal Student of Chitkara University. He is from chandigarh,India.He is very much fond of listening English songs.</h6>
+  <img src="{{url_for ('static',filename='nakul.jpg')}}" alt="Girl in a jacket" width="200" height="200"><br><br>
+  <h6>His name is Nakul Kumar Student of Chitkara University. He is from Bathinda,India.He love to play and watch cricket.</h6>
+  </center>
+</div>
+
+<section class="footer" >
+<br>
+<div>
+
+  
+           <center> 
+       
+    <hr style="background-color:black;margin-left:30px;margin-right:30px">
+    <p class="copyright" style="color:black">Copyright reserved @ <strong>SpeechlessSoul</strong></i></p></center>
+</div>    
+</section>
+</body>
+</html>

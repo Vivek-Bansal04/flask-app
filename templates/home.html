@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+ <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  #demo
+  {
+   height:60%;
+   width:60%;
+   margin-bottom:40px;
+      margin-top:60px;
+
+  }
+
+
+body,html,section
+{
+   overflow-x:hidden;
+ }
+
+
+.footer
+{
+  
+            position:absolute; 
+          color:black;
+            width: 100%; 
+            /* Height of the footer*/  
+            height: 250px; 
+            background:grey; 
+}
+#mar1
+{
+    margin-left:50px;
+
+}
+.y1
+{
+  height:60px;
+  width:60px;
+  margin-left:-450px;
+}
+
+#im
+{
+  width:60px;
+}
+.y7
+{
+  height: 350px;
+  width:350px;
+}
+@media screen and (max-width:615px)
+{
+  .mar
+  {
+   display: none;
+   margin-left:10px;
+  }
+  #mar1
+{
+    margin-left:20px;
+
+}
+  .font
+  {
+    font-size: 12px;
+  }
+ .qq
+{
+font-size:11px;
+}
+.footer
+{
+font-size:11px;
+}
+.q1
+{
+ font-size:11px;
+
+}
+.mc
+{
+ font-size:25px;
+
+}
+.y1
+{
+  margin-left: -200px;
+  height:35px;
+  width:35px;
+}
+
+
+.y3
+{
+   font-size:16px;
+    margin-right: -1px;
+}
+.y4
+{
+   font-size:16px;
+       margin-right: -85px;
+
+}
+.y5
+{
+   font-size:16px;
+       margin-right: -1px;
+
+}
+.y6
+{
+   font-size:16px;
+          margin-right: -15px;
+
+}
+.y7
+{
+  height:250px;
+  width:250px;
+}
+.k
+{
+  font-size: 14px;
+}
+#demo
+{
+  margin:40px 10px 10px 10px;
+}
+p
+{
+  font-size:12px;
+}
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+  </style>
+<body >
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#006400">
+ <div class="container-fluid">
+ <a class="navbar-brand" href="#"> <img src="{{url_for ('static',filename='t.jpg')}}" style="width:40px;">
+</a>
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color:white">Speechless Soul</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <a href="/post" target="_blank"><li class="active" ><button class="btn btn-light navbar-btn btn-sm" >Form</button></li></a></ul>
+ 
+</div>
+</nav>
+<div class="container" style="background-image: url('C:\Users\rakesk goyal\Desktop\python-Flask-Website\static\back2.jpg');">
+  <center>
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for ('static',filename='p9.jpg')}}" alt="Los Angeles" style="width:100%;"  >
+      <div class="carousel-caption">
+        <h3 class="k">"A dog is the only thing on earth that loves you more than you love yourself."
+</h3>
+            </div> 
+ 
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for ('static',filename='p2.jpg')}}" alt="Chicago" style="width:100%;">
+ <div class="carousel-caption">
+        <h3 class="k">We really appreciate you for helping these speechless souls.</h3>
+      
+      </div> 
+    </div>
+    <div class="carousel-item">
+      <img src="{{url_for ('static',filename='p1.jpg')}}"  alt="New York" style="width:100%;">
+ <div class="carousel-caption" >
+        <h3 class="k">"An animal's eyes have the power to speak a great language."</h3>
+      
+      </div>  
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</center>
+</div>
+</div><br>
+<div class="jumbotron">
+<center><h1 class="mc">Here we have shown some of the Posts posted by the gems.</h1></center>
+<br><br>
+
+<center>
+<div>
+  <img src="{{url_for ('static',filename='round.png')}}"  class="y1"><span > Speechless Soul</span><br><br>
+    <img src="data:;base64,{{ data2}}"  class="y7">
+    <br><br>
+    <h4 style="margin-left:-05px" class="y3">Name of the animal: {{counter1}}</h4> 
+         <h4 style="margin-left:-40px" class="y6">Current location: {{counter4}}</h4>
+       
+                <h4 style="margin-left:-5px" class="y5">State of the animal: {{counter5}}</h4>
+                             <a href="#" data-toggle="tooltip" title="Hooray!" style="color:black" class="font">Know more</a>
+  
+
+
+  </div>
+  <br>
+  
+ <div>
+  <img src="{{url_for ('static',filename='round.png')}}"  class="y1"> <span  > Speechless Soul<br></span><br>
+    <img src="data:;base64,{{ num1}}"  class="y7">
+    <br><br>
+    <h4 style="margin-left:-5px" class="y3">Name of the animal: {{counter6}} </h4>
+       <h4 style="margin-left:-40px" class="y6">Current location: {{counter9}}</h4>
+      
+                <h4 style="margin-left:-5px" class="y5">State of the animal: {{counter10}}</h4>
+                              <a href="#" data-toggle="tooltip" title="Hooray!" style="color:black;" class="font">Know more</a>
+  
+
+
+
+
+  </div>
+  <br>
+  <div>
+  <img src="{{url_for ('static',filename='round.png')}}"class="y1"> <span  >   Speechless Soul<br></span><br>
+    <img src="data:;base64,{{ num2}}"  class="y7">
+    <br><br>
+    <h4 style="margin-left:-05px" class="y3">Name of the animal: {{counter11}}</h4>
+      <h4 style="margin-left:-40px" class="y6">Current location: {{counter14}}</h4>
+      
+                <h4 style="margin-left:-5px" class="y5">State of the animal: {{counter15}}</h4>
+                                <a href="#" data-toggle="tooltip" title="Hooray!" style="color:black" class="font">Know more</a>
+  
+
+
+
+
+  </div><br>
+  <div>
+<img src="{{url_for ('static',filename='round.pn')}}" class="y1"> <span>   Speechless Soul<br></span><br>
+    <img src="data:;base64,{{ num3}}"  class="y7">
+    <br><br>
+    <h4 style="margin-left:-05px" class="y3">Name of the animal: {{counter16}}</h4>
+    
+         <h4 style="margin-left:-40px" class="y6">Current location: {{counter19}}</h4>
+
+                <h4 style="margin-left:-5px" class="y5">State of the animal: {{counter20}}</h4>
+               <a href="#" data-toggle="tooltip" title="Hooray!" style="color:black" class="font">Know more</a>
+  
+
+  </div><br>
+  <div>
+  <img src="{{url_for ('static',filename='round.png')}}"  class="y1"> <span  >    Speechless Soul<br></span><br>
+    <img src="data:;base64,{{ num4}}"  class="y7">
+    <br><br>
+    <h4 style="margin-left:-05px" class="y3">Name of the animal: {{counter21}}</h4>
+    <h4 style="margin-left:-40px" class="y6">Current location: {{counter24}}</h4>
+   
+                <h4 style="margin-left:-5px" class="y5">State of the animal: {{counter25}}</h4>
+               <a href="#" data-toggle="tooltip" title="Hooray!" style="color:black" class="font">Know more</a>
+  
+                              
+
+
+
+
+  </div>
+</div>
+
+<section class="footer">
+<br>
+<div class="container-fluid">
+
+  <table class="table table-borderless" style="margin-left:20px;color:white;">
+    <thead>
+      <tr style="color:black">
+        <th>Useful Links</th>
+        <th>Information</th>
+        <th>Follow Us</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="https://www.websitepolicies.com/policies/view/zQ2iSO5Y" style="color:black" target="_blank">Privacy Policy</a></td>
+        <td><a href="/about" style="color:black" target="_blank">About Us</a></td>
+        <td>  <a href="https://www.facebook.com/Speechless-Soul-103548761408901" style="color:black" target="_blank"><span><img src="{{url_for ('static',filename='l5.jpg') }}" style="width:20px;" class="mar"></span> Facebook</a></td>
+      </tr>
+      <tr>
+        <td><a href="https://www.websitepolicies.com/policies/view/YrZohdMD" style="color:black" target="_blank">Term and Conditions</a></td>
+
+        <td><a href="http://www.awbi.in/" style="color:black" target="_blank">AWBI</a></td>
+        <td> <a href="https://www.instagram.com/speechlesssoul04/" style="color:black" target="_blank"><span><img src="{{url_for ('static',filename='l3.jpg') }}" style="width:20px;" class="mar"></span> Instagram</a></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+           <center> 
+       
+    <hr style="background-color:black;margin-left:30px;margin-right:30px">
+    <p class="copyright" style="color:black">Copyright reserved @ <strong>SpeechlessSoul</strong></i></p></center>
+</div>    
+</center>
+</section>
+
+</body>
+</html>
